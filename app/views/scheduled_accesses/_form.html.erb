@@ -1,0 +1,33 @@
+<%= form_for(@scheduled_access) do |f| %>
+  <% if @scheduled_access.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@scheduled_access.errors.count, "error") %> prohibited this scheduled_access from being saved:</h2>
+
+      <ul>
+      <% @scheduled_access.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :order_id %><br>
+    <%= f.number_field :order_id %>
+  </div>
+  <div class="field">
+    <%= f.label :scheduled_date %><br>
+    <%= f.date_select :scheduled_date %>
+  </div>
+  <div class="field">
+    <%= f.label :scheduled_begin_time %><br>
+    <%= f.time_select :scheduled_begin_time %>
+  </div>
+  <div class="field">
+    <%= f.label :sheduled_end_time %><br>
+    <%= f.time_select :sheduled_end_time %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

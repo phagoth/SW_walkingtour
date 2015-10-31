@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Scheduled Accesses</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Order</th>
+      <th>Scheduled date</th>
+      <th>Scheduled begin time</th>
+      <th>Sheduled end time</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @scheduled_accesses.each do |scheduled_access| %>
+      <tr>
+        <td><%= scheduled_access.order_id %></td>
+        <td><%= scheduled_access.scheduled_date %></td>
+        <td><%= scheduled_access.scheduled_begin_time %></td>
+        <td><%= scheduled_access.sheduled_end_time %></td>
+        <td><%= link_to 'Show', scheduled_access %></td>
+        <td><%= link_to 'Edit', edit_scheduled_access_path(scheduled_access) %></td>
+        <td><%= link_to 'Destroy', scheduled_access, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Scheduled access', new_scheduled_access_path %>

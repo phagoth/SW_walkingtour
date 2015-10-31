@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Order:</strong>
+  <%= @scheduled_access.order_id %>
+</p>
+
+<p>
+  <strong>Scheduled date:</strong>
+  <%= @scheduled_access.scheduled_date %>
+</p>
+
+<p>
+  <strong>Scheduled begin time:</strong>
+  <%= @scheduled_access.scheduled_begin_time %>
+</p>
+
+<p>
+  <strong>Sheduled end time:</strong>
+  <%= @scheduled_access.sheduled_end_time %>
+</p>
+
+<%= link_to 'Edit', edit_scheduled_access_path(@scheduled_access) %> |
+<%= link_to 'Back', scheduled_accesses_path %>
