@@ -5,7 +5,7 @@ class CreateOptions < ActiveRecord::Migration
       t.string :codename, null: false
       t.string :fullname, null: false
       t.string :picture
-      t.decimal :price
+      t.decimal :price, scale: 2
 
       t.timestamps null: false
 

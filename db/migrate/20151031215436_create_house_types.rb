@@ -4,7 +4,7 @@ class CreateHouseTypes < ActiveRecord::Migration
       t.string :codename, null: false
       t.string :fullname, null: false
       t.string :picture
-      t.decimal :price, scale: 2
+      t.decimal :price, precision: 10, scale: 2
 
       t.timestamps null: false
     end
